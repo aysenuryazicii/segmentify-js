@@ -1,0 +1,320 @@
+:root {
+    --background-gray: #eeeeee;
+    --blue-primary: #eff7fe;
+    --gray-primary: #807e7e;
+    --blue-text: rgb(54, 101, 243);
+    --green-primary: #2faa4e;
+    --blue-buy: rgb(54, 101, 243);
+    --price-background: rgb(244, 244, 244);
+    --price-text: rgb(51, 51, 51);
+    --shipping-color: rgb(112, 112, 112);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-gray);
+    overflow: hidden;
+}
+
+.container {
+    background-color: white;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 14px;
+    height: 90vh;
+}
+
+.main-cont{
+    padding-right: 0.5em;
+    z-index: 10;
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-weight: 700;
+}
+
+.container-inline {
+    display: flex;
+}
+
+.categories {
+    margin: 0px;
+    padding: 10px 0px 0px;
+    width: 170px;
+    z-index: 20;
+    background-color: white;
+}
+
+.category {
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: var(--gray-primary);
+    width: 170px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.category:hover{
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    border-radius: 5px;
+}
+
+.clicked-design::before{
+    color: rgb(43, 80, 194);
+    position: absolute;
+    left: 1.5em;
+    border-radius: 0px 0.25em 0.25em 0px;
+    background-color: rgb(43, 80, 194);
+    width: 5px;
+    height: 50px;
+    content: "";
+}
+
+.clicked-design.category{
+    color: rgb(43, 80, 194);
+    background-color:  rgb(241, 248, 254);
+}
+
+.recommendProducts,
+.all-products {
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 223.524px;
+    margin-right: 16px;
+    padding: 0.5em;
+    flex-direction: column;
+}
+
+.product:hover {
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 10px 0px, rgb(0 0 0 / 15%) 0px 14px 25px 0px;
+}
+
+img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    align-items: center;
+    background-color: var(--background-gray);
+}
+
+.name {
+    font-weight: 500;
+    padding: 1em 0.75em 0.5em;
+    min-height: 56px;
+    display: block;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: calc(2.68em);
+    line-height: 1.34;
+    margin-bottom: 0.25em;
+    height: auto;
+    font-size: 0.875em;
+    color: var(--price-text);
+}
+
+.price {
+    background-color: var(--price-background);
+    color: var(--price-text);
+    font-weight: bold;
+    width: 80%;
+    border-radius: 0.375em;
+    margin-bottom: 0.75em;
+    padding: 0.75em;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.buy {
+    /* visibility: hidden;*/
+    /*position: absolute;*/
+    background-color: var(--blue-buy);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375em;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    width: 100%;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 65px;
+    appearance: none !important;
+}
+
+.buy:hover{
+    visibility: display;   
+}
+
+i.fa-chevron-left {
+    width: 16px;
+    height: 16px;
+    padding-right: 10px;
+}
+
+i.fa-chevron-right {
+    width: 16px;
+    height: 16px;
+    padding-right: 15px;
+}
+
+.chevron-left {
+    left: -2rem;
+    align-items: center;
+    justify-content: flex-end;
+    top: 10.75em;
+}
+
+.chevron-right {
+    right: -2rem;
+    align-items: center;
+    justify-content: center;
+    top: 10.75em;
+}
+
+.not-allowed{
+    opacity: 1;
+    pointer-events: all;
+    cursor: not-allowed !important;
+}
+
+.icon {
+    display: flex;
+    position: relative;
+    margin: 0px 0.125em 0px 0px;
+    padding: 0px;
+    position: absolute;
+    z-index: 10;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 35rem;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 4.12rem;
+    height: 4.25rem;
+}
+
+.fa-truck{
+    color: #36b458;
+    margin: 0px 0.5em 0px 0px;
+}
+
+.shipping{
+    margin: 0px 0px 0.5em;
+    align-items: center;
+    padding-right: 90px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title{
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 0.75em;
+    color: var(--shipping-color);
+}
+
+.swiper-slide{
+    flex-shrink: 0;
+    height: auto;
+}
+
+.pop-up{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    opacity: 0.95;
+    margin-top: 16px;
+    border-radius: 8px;
+    background-color: rgb(17, 24, 32);
+    animation: 0.5s ease 0s 1 normal none running bIIGLr;
+    color: rgb(255, 255, 255);
+    position: initial;
+    right: 0px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(100%);
+    z-index: 9999;
+    padding: 1em;
+    width: 100%;
+    max-width: 400px;
+}
+
+.unvisible{
+    display: none;
+}
+
+.fa-circle-check{
+    border-radius: 50%;
+    color: rgb(54, 180, 88);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px 0px 0px;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+}
+
+i.fa-xmark{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.text{
+    flex: 1 1 0%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.text-one{
+    color: white;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.text-two{
+    color: rgb(175, 193, 250);
+    line-height: 1.43;
+    cursor: pointer;
+}
